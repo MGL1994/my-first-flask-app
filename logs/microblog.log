@@ -1,1 +1,77 @@
-2020-01-27 14:16:50,179 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 17:15:49,890 ERROR: Exception on /reset_password_request [POST] [in /Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/routes.py", line 144, in reset_password_request
+    form = EditProfileForm(current_user.username)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/email.py", line 21, in send_password_reset_email
+    user=user, token=token))
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password.html
+2020-01-27 17:19:47,648 ERROR: Exception on /reset_password_request [POST] [in /Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/routes.py", line 144, in reset_password_request
+    form = EditProfileForm(current_user.username)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/email.py", line 21, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/email.py", line 10, in send_email
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "/Users/michaellaird/.pyenv/versions/3.7.6/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/Users/michaellaird/.pyenv/versions/3.7.6/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/Users/michaellaird/.pyenv/versions/3.7.6/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/Users/michaellaird/.pyenv/versions/3.7.6/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/Users/michaellaird/.pyenv/versions/3.7.6/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2020-01-27 17:23:27,014 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 17:48:44,167 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:47]
+2020-01-28 09:24:37,691 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:47]
+2020-01-28 11:49:14,061 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:49]
+2020-01-28 12:55:20,820 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:52]
+2020-01-28 12:55:48,452 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:52]
+2020-01-28 12:55:56,995 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:52]
+2020-01-28 12:59:26,251 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:52]

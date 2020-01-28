@@ -1,0 +1,82 @@
+2020-01-27 16:03:56,494 ERROR: Exception on /user/Dex [GET] [in /Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/routes.py", line 75, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/templates/user.html", line 14, in root
+    {% elif not current_user.is_following(user) %}
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/templates/base.html", line 54, in root
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/templates/user.html", line 49, in block_content
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'is_following'
+2020-01-27 16:15:33,370 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 16:18:08,088 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 16:18:38,876 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 16:20:09,593 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:43]
+2020-01-27 16:20:19,234 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:43]
+2020-01-27 17:13:34,499 INFO: Microblog startup [in /Users/michaellaird/Development/Projects/my-first-flask-app/app/__init__.py:45]
+2020-01-27 17:13:48,957 ERROR: Exception on /reset_password_request [POST] [in /Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/routes.py", line 144, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/app/email.py", line 21, in send_password_reset_email
+    user=user, token=token))
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/michaellaird/Development/Projects/my-first-flask-app/venv/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password.html
